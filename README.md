@@ -11,10 +11,10 @@ This library uses the SSE algorithm [1]-[3] to compute observables of sign-free 
 experimental system. The API is flexible to handle a large class of model Hamiltonians, including spin systems, 
 disordered systems etc.
 
-*[1] A. W. Sandvik, Phys. Rev. B 59, R14157 (1999). 
-*[2] A. Dorneich and M. Troyer, Phys. Rev. E 64, 066701 (2001). 
-*[3] O. F. Syljuasen and A. W. Sandvik, Phys. Rev. E 66, 046701 (2002).
-*[4] McKay, D., Ray, U., Natu, S., Russ, P., Ceperley, D., & DeMarco, B. Phys. Rev. A, 91(2), 023625 (2015).
+* [1] A. W. Sandvik, Phys. Rev. B 59, R14157 (1999). 
+* [2] A. Dorneich and M. Troyer, Phys. Rev. E 64, 066701 (2001). 
+* [3] O. F. Syljuasen and A. W. Sandvik, Phys. Rev. E 66, 046701 (2002).
+* [4] McKay, D., Ray, U., Natu, S., Russ, P., Ceperley, D., & DeMarco, B. Phys. Rev. A, 91(2), 023625 (2015).
 
 Minimum Requirements
 --------------------
