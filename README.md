@@ -13,5 +13,16 @@ Minimum Requirements
 --------------------
 g++ 4.8 with c++0x support
 Gnu Scientfic Library
-OpenMP 1.
+OpenMP
 OpenMPI 1.6.5
+
+Main Library Installation Instructions
+--------------------------------------
+Create the Makefile using
+python paramGenerator/makefileCreate.py MakeFileDirList Makefile
+
+This will create the makefile. You will need to add the linker locations for gsl and gslcblas in the Makefile. The default Makefile assumes that the libraries are loaded under standard LD_LIBRARY_PATH locations. Once the paths are setup correctly run make to create the library. 
+
+Model Installation
+------------------
+The different models that use the main library are located under Models. Each model requires a separate installation and creation of executables. These are much simpler so the Makefile has already been provided. Run make to create the executables. The parameter file etc. will be model specific so refer to the documentation in the model folders for further instructions. 
