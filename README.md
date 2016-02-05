@@ -1,6 +1,5 @@
-# CSSER
-C++ Stochastic Series Expansion Runner
-======================================
+C++ Stochastic Series Expansion Runner (CSSER)
+==============================================
 #####Author: Ushnish Ray
 #####email: ushnish.qmc@gmail.com
 
