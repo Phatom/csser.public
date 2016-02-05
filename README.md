@@ -1,8 +1,8 @@
 # CSSER
 C++ Stochastic Series Expansion Runner
 ======================================
-Author: Ushnish Ray
-email: ushnish.qmc@gmail.com
+###Author: Ushnish Ray
+###email: ushnish.qmc@gmail.com
 
 This is a free software; you may use/distribute the code freely but all work must acknowledge Ushnish Ray as an author.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -18,10 +18,10 @@ disordered systems etc.
 
 Minimum Requirements
 --------------------
-*g++ 4.8 with c++0x support
-*Gnu Scientfic Library 
-*OpenMP
-*OpenMPI 1.6.5
+* g++ 4.8 with c++0x support
+* Gnu Scientfic Library 
+* OpenMP
+* OpenMPI 1.6.5
 
 Main Library Installation Instructions
 --------------------------------------
