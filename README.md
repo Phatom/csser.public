@@ -24,9 +24,9 @@ Minimum Requirements
 
 Main Library Installation Instructions
 --------------------------------------
-Create a folder objLibrary using: mkdir objLibrary
-Create the Makefile using
-python paramGenerator/makefileCreate.py MakeFileDirList Makefile
+* Create a folder objLibrary using: mkdir objLibrary
+Create the Makefile using:
+* python paramGenerator/makefileCreate.py MakeFileDirList Makefile
 
 This will create the makefile and the target location for the object files that are used to create the static linker libarary libsse.a used by all models. You will need to add the linker locations for gsl and gslcblas in the Makefile. The default Makefile assumes that the libraries are loaded under standard LD_LIBRARY_PATH locations. Once the paths are setup correctly run make. 
 
