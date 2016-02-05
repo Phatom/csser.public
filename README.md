@@ -12,8 +12,11 @@ disordered systems etc.
 Minimum Requirements
 --------------------
 g++ 4.8 with c++0x support
+
 Gnu Scientfic Library
+
 OpenMP
+
 OpenMPI 1.6.5
 
 Main Library Installation Instructions
