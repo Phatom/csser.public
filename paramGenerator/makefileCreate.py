@@ -15,12 +15,12 @@ for line in f:
 f.close()
 
 output = 'CPP=mpicxx\n'
-output += 'CFLAGS= -O3 -fopenmp -lm -std=gnu++0x -I ./simplex/nrlib -I ./include -I ./core -I ./observables -I ./modes\n'
+output += 'CFLAGS= -O3 -fopenmp -lm -std=gnu++0x -I ./simplex/nrlib -I ./include -I ./core -I ./observables -I ./modes\n' 
 output += 'LDFLAGS = -fopenmp -lgsl -lgslcblas\n'
 output += 'OBJTARGET = ./objLibrary\n'
 output += 'OBJECTS=$(OBJTARGET)/*.o\n'
 output += 'SLINKER=ar\n'
-output += 'STATICLINK=libsse.a\n\n'
+output += 'STATICLINK=libdmcsns.a\n\n'
 output += '#=========================================================================\n\n'
 
 objFileList = ''
@@ -31,12 +31,19 @@ for i in range(0,dn):
 	
 	for subd,d,files in os.walk(dd):
 		for ff in files:
-			if(ff[-4:] == '.cpp'):
-				print dd + '/' + ff[:-4] + '.o'	
+
+			sd = subd[len(dd)+1:]
+			
+			#Ignore sub-directory that contains test
+
+			if(ff[-4:] == '.cpp' and not('test' in sd)):
+				print dd + '/' + ff[:-4] + '.o',sd
 				objfile = ff[:-4] + '.o'
 								
-				cppff = dd + '/' + ff
+				cppff = dd + '/' + ff		
 				hff = dd + '/' + ff[:-4] + '.h'
+				if(~os.path.isfile(hff)):
+					hff = ''
 				off = '$(OBJTARGET)/' + objfile
 
 				objFileList += off + ' '
