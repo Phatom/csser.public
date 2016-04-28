@@ -20,7 +20,7 @@ output += 'LDFLAGS = -fopenmp -lgsl -lgslcblas\n'
 output += 'OBJTARGET = ./objLibrary\n'
 output += 'OBJECTS=$(OBJTARGET)/*.o\n'
 output += 'SLINKER=ar\n'
-output += 'STATICLINK=libdmcsns.a\n\n'
+output += 'STATICLINK=libsse.a\n\n'
 output += '#=========================================================================\n\n'
 
 objFileList = ''
