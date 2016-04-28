@@ -1,4 +1,4 @@
-BASEPATH=/home/ushnish/research/Development/checkouts/sseVersion4/
+BASEPATH=../../
 SSEPATH=-I $(BASEPATH)/include -I $(BASEPATH)/core -I $(BASEPATH)/modes -I $(BASEPATH)/observables -I $(BASEPATH)/simplex/nrlib
 
 CPP=mpicxx 
