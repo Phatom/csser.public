@@ -1,0 +1,72 @@
+<paramFile file=paramFile size=7>
+baseDir			./
+outputFile		outdata
+flagParamFile		flagFile
+stateParamFile		stateFile
+hamiltonianParamFile	hamiltonianFile
+stateOutputFile		stateOut
+eqbParamFile		eqbFile
+</paramFile>
+
+
+<flag file=$paramFile.flagParamFile size=8>
+oride_lpContrIter 	False		{False,True}
+oride_temperature 	False		{False,True}
+chkPointInterval  	0.25		{float}
+autoCalibrate 	  	False		{False,True}
+autoFactor 		20.0		{float}
+autoWindow 		10		{integer}
+randomize 		False		{False,True}
+seed			0		{integer}
+</flag>	
+
+
+<hamiltonian file=$paramFile.hamiltonianParamFile size=8>
+t		1.0		{float}
+U		10.0		{float}
+mu		5.0		{float}
+dimension	1		{integer}
+nspd		100		{integer}
+LAM		4		{integer}
+EPS		0.1		{float}
+boundaryCond	pbc		{pbc,hw}		
+</hamiltonian>
+
+
+<state file=$paramFile.stateParamFile size=6>
+LAM		2				{integer}
+statesize	100				{integer}
+opCutOff	100000				{integer}
+stringsize	10000000			{integer}
+lpContrIter	100				{integer}
+stateFileName	saves/stateFileWARM		{string}
+</state>
+
+
+<eqbParam file=$paramFile.eqbParamFile size=7>
+startBeta		10.0			{real}
+incBeta			1.0			{real}
+targetBeta		13.0			{real}
+numSweeps		1000			{integer}
+skipSweeps		100			{integer}
+startLoopContrIter	300			{integer}
+eqbStateFile		saves/stateFileEQB	{string}
+</eqbParam>
+
+
+<warmParam file=none size=4>
+targetBeta		13.0			{real}
+numSweeps		1000			{integer}
+startLoopContrIter	300			{integer}
+warmStateFile		saves/stateFileWarm	{string}
+</warmParam>
+
+
+<dataParam file=none size=6>
+targetBeta		13.0			{real}
+numBins			20			{integer}
+numSweeps		1000			{integer}
+startLoopContrIter	3000			{integer}
+dataStateFile		saves/stateData		{string}
+sampleMode		none			{none,spdm,sfluid,green,spdm&sfluid,all}
+</dataParam>
